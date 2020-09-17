@@ -1,4 +1,4 @@
-use std::io;
+use std::io
 
 fn main() {
     println!("숫자를 맞혀봅시다!");
