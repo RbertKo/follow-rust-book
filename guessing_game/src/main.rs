@@ -1,4 +1,5 @@
-use std::io
+use std::io;
+use rand::Rng;
 
 fn main() {
     println!("숫자를 맞혀봅시다!");
@@ -9,6 +10,8 @@ fn main() {
 
     io::stdin().read_line(&mut guess)
         .expect("입력한 값을 읽지 못했습니다.");
+
+    
 
     println!("입력한 값: {}", guess);
 }
