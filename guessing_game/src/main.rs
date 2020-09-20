@@ -8,6 +8,7 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
 
+    loop {
     println!("정답이라고 생각하는 숫자를 입력하세요.");
 
     let mut guess = String::new();
@@ -15,7 +16,7 @@ fn main() {
     io::stdin().read_line(&mut guess)
         .expect("입력한 값을 읽지 못했습니다.");
 
-    
+    let guess: u32 = guess.trim().parse().expect("입력한 값이 올바른 숫자가 아닙니다.");
 
     println!("입력한 값: {}, 결과 값: {}", guess, secret_number);
 
@@ -24,4 +25,5 @@ fn main() {
         Ordering::Greater => println!("입력한 숫자가 큽니다."),
         Ordering::Equal => println!("정답!")
     }
+}
 }
