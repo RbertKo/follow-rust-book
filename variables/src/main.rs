@@ -16,4 +16,11 @@ fn main() {
     // Shadowd 하다.
     let y = 12;
     println!("새로운 y의 값: {}", y);
+
+    // Shadowed to anther type
+    let z = "완전 z멋대로";
+    println!("z: {}", z);
+
+    let z = z.len();
+    println!("z: {}", z);
 }
