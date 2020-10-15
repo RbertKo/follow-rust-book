@@ -3,6 +3,10 @@ fn print_type_of<T>(_: &T) {
 }
 
 fn main() {
+    // Rust's default is i32.
+    let any_int = 1;
+    print_type_of(&any_int);
+
     // 8bit Integer
     let min_int_8: i8 = i8::MIN;
     let max_int_8: i8 = i8::MAX;
