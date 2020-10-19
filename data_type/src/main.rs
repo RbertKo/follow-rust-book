@@ -8,7 +8,7 @@ fn main() {
     print_type_of(&any_int);
 
     // 8bit Integer
-    let min_int_8: i8 = i8::MIN;
+    let min_int_8: i8 = i8::MIN; // ':i8' => Type Annotation
     let max_int_8: i8 = i8::MAX;
     
     println!("8bit Integer is a value between {} and {}", min_int_8, max_int_8);
@@ -39,4 +39,11 @@ fn main() {
     let f32_float: f32 = 1.0;
 
     print_type_of(&f32_float);
+
+    //=========================================
+    // Compound Type
+
+    // Tuple
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
 }
