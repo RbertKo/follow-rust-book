@@ -46,4 +46,9 @@ fn main() {
     // Tuple
 
     let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    // Destructuring
+    let (x, y, z) = tup;
+
+    print!("z: 의 값: {}", z);
 }
