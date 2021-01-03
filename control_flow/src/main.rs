@@ -23,4 +23,15 @@ fn main() {
     } else {
         println!("number is not 3 and 5. number = {}", number);
     }
+
+    // Repetition
+    // loop keyword
+
+    loop {
+        println!("infinity");
+
+        if number >= 3 { 
+            break;
+        }
+    }
 }
