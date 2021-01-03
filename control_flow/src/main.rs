@@ -43,4 +43,11 @@ fn main() {
 
         new_number += 1;
     }
+
+    // for
+    let array = [10, 20, 30, 40, 50];
+    
+    for i in (0 .. array.len()).rev() {
+        println!("i is {}", array[i])
+    }
 }
