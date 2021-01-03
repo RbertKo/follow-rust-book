@@ -6,6 +6,7 @@ fn main() {
     let number = if number < 3 { // like ternary operator
         println!("number is less than 3: number = {}", number);
         number
+        // "number" => Error! because, it isn't not same return type with 'else'
     } else {
         println!("number is greater than 3: number = {}", number);
         3
