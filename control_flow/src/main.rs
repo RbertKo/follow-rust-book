@@ -13,7 +13,11 @@ fn main() {
     //     println!("number is existed.")
     // }
     // => Good case
-    if number != 3 {
-        println!("number is not 3: number = {}", number);
+    if number == 3 {
+        println!("number is 3: number = {}", number);
+    } else if number == 5 {
+        println!("number is 5: number = {}", number);
+    } else {
+        println!("number is not 3 and 5. number = {}", number);
     }
 }
