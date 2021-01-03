@@ -27,11 +27,20 @@ fn main() {
     // Repetition
     // loop keyword
 
-    let new_number = loop {
+    let mut new_number = loop {
         println!("infinity");
 
         if number >= 3 { 
             break number + 1
         }
+    };
+
+    println!("new_number is 'number' + 1. new_number = {}", new_number);
+
+    // while keyword
+    while new_number < 6 {
+        println!("new_number is less than 6. new_number = {}", new_number);
+
+        new_number += 1;
     }
 }
