@@ -27,11 +27,11 @@ fn main() {
     // Repetition
     // loop keyword
 
-    loop {
+    let new_number = loop {
         println!("infinity");
 
         if number >= 3 { 
-            break;
+            break number + 1
         }
     }
 }
