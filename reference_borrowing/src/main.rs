@@ -1,7 +1,7 @@
 fn main() {
     let s1 = String::from("hello");
 
-    let len = calculate_length(&s1);
+    let len = calculate_length(&s1); // This(&) is called reference
 
     println!("The length of '{}' is {}.", s1, len);
 }
