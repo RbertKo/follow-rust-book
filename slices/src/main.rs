@@ -5,13 +5,13 @@ fn main() {
 }
 
 fn first_word(s: &String) -> usize {
-    let bytes = s.as_bytes();
+    let bytes: Vec<_> = s.chars().collect();
 
     for (i, &item) in bytes.iter().enumerate() {
         println!("{}", &item);
         
-        if item == b' ' {
-            println!("item: {} / result: {}", item, item == b' ');
+        if item == ' ' {
+            println!("item: {} / result: {}", item, item == ' ');
             return i;
         }
     }
