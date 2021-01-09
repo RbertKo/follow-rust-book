@@ -1,3 +1,20 @@
 fn main() {
-    println!("Hello, world!");
+    let s = String::from("Hello, world!");
+
+    first_word(&s);
+}
+
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        println!("{}", &item);
+        
+        if item == b' ' {
+            println!("item: {} / result: {}", item, item == b' ');
+            return i;
+        }
+    }
+
+    s.len()
 }
