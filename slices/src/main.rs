@@ -1,9 +1,9 @@
 fn main() {
     let s = String::from("Hello, world!");
 
-    first_word(&s);
+    let len = first_word(&s);
 
-    let hello = &s[..5];
+    let hello = &s[..len];
     let world = &s[7..];
 
     println!("{}", hello);
