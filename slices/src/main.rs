@@ -8,6 +8,7 @@ fn main() {
 
     println!("{}", hello);
     println!("{}", world);
+    println!("{}", &s[..]); // a slice of the entire string
 }
 
 fn first_word(s: &String) -> usize {
