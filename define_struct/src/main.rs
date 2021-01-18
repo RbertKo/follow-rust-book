@@ -15,4 +15,11 @@ fn main() {
     
     user.active = false;
     // user.active = false; -> 가변 변수일 경우 다른 값 할당 가능
+
+    let user2 = User {
+        email: String::from("another@example.com"),
+        username: String::from("anotherusername567"),
+        active: user.active,
+        sign_in_count: user.sign_in_count,
+    };
 }
