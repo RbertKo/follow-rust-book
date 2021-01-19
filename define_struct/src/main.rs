@@ -5,6 +5,8 @@ struct User {
     active: bool,
 }
 
+struct Color(i32, i32, i32);
+
 fn main() {
     let mut user = User {
         username: String::from("MyeongSeok Ko"),
@@ -22,4 +24,6 @@ fn main() {
         active: user.active,
         sign_in_count: user.sign_in_count,
     };
+
+    let black = Color(0, 0, 0);
 }
