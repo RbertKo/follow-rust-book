@@ -1,29 +1,31 @@
-struct User {
+struct User { // Struct
     username: String,
     email: String,
     sign_in_count: u64,
     active: bool,
 }
 
-struct Color(i32, i32, i32);
+struct Color(i32, i32, i32); // Tuple Struct
 
 fn main() {
-    let mut user = User {
-        username: String::from("MyeongSeok Ko"),
-        email: String::from("myeongsku@gmail.com"),
-        sign_in_count: 10,
-        active: true
-    };
+    let mut user = get_user(String::from("MyeongSeok Ko"), String::from("myeongsku@gmail.com"));
     
-    user.active = false;
-    // user.active = false; -> 가변 변수일 경우 다른 값 할당 가능
+    user.active = false; // assign value to mutable struct's field.
 
-    let user2 = User {
+    let user2 = User { // Using struct update syntax
         email: String::from("another@example.com"),
         username: String::from("anotherusername567"),
-        active: user.active,
-        sign_in_count: user.sign_in_count,
+        ..user
     };
 
     let black = Color(0, 0, 0);
+}
+
+fn get_user(email: String, username: String) -> User {
+  User { // Using field init shorthand
+    email,
+    username,
+    sign_in_count: 10,
+    active: true
+  }
 }
