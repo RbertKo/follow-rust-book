@@ -1,27 +1,13 @@
 #[derive(Debug)]
 enum IpAddrKind {
-    V4, // This is called Variants of enums in rust
-    V6,
-}
-
-struct IpAddr {
-    kind: IpAddrKind,
-    address: String,
+    V4(String), // This is called Variants of enums in rust
+    V6(String),
 }
 
 fn main() {
-    let four = IpAddrKind::V4;
-    let six = IpAddrKind::V6;
+    let four = IpAddrKind::V4(String::from("127.0.0.1"));
+    
+    let six = IpAddrKind::V6(String::from("::1"));
 
     println!("four: {:?} / six: {:?}", four, six);
-
-    let home = IpAddr {
-        kind: IpAddrKind::V4,
-        address: String::from("127.0.0.1"),
-    };
-    
-    let loopback = IpAddr {
-        kind: IpAddrKind::V6,
-        address: String::from("::1"),
-    };
 }
