@@ -1,5 +1,5 @@
 enum IpAddrKind {
-    V4,
+    V4, // This is called Variants of enums in rust
     V6,
 }
 
