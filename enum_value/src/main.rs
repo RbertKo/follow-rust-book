@@ -4,6 +4,7 @@ enum IpAddrKind {
     V6(String),
 }
 
+#[derive(Debug)]
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -26,5 +27,12 @@ fn main() {
 
     let m = Message::Write(String::from("hello"));
 
+    let move_val = Message::Move {
+        x: 1,
+        y: 2,
+    };
+
     m.call();
+
+    println!("{:?}", move_val);
 }
