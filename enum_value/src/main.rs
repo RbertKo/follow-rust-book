@@ -36,3 +36,24 @@ fn main() {
 
     println!("{:?}", move_val);
 }
+
+fn checked_division(dividend: i32, divisor: i32) -> Option<i32> {
+    if divisor == 0 {
+        // Failure is represented as the `None` variant
+        None
+    } else {
+        // Result is wrapped in a `Some` variant
+        Some(dividend / divisor)
+    }
+}
+
+// This function handles a division that may not succeed
+fn try_division(dividend: i32, divisor: i32) {
+    // `Option` values can be pattern matched, just like other enums
+    match checked_division(dividend, divisor) {
+        None => println!("{} / {} failed!", dividend, divisor),
+        Some(quotient) => {
+            println!("{} / {} = {}", dividend, divisor, quotient)
+        },
+    }
+}
