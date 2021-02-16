@@ -1,7 +1,11 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
+pub mod a {
+  pub mod series {
+      pub mod of {
+          pub fn nested_modules() {}
+      }
+  }
+}
+
+fn main() {
+  a::series::of::nested_modules();
 }
