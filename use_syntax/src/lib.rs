@@ -6,8 +6,8 @@ pub mod a {
   }
 }
 
-use a::series::of;
+use a::series::of::nested_modules;
 
 fn main() {
-  of::nested_modules();
+  nested_modules();
 }
