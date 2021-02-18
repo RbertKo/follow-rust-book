@@ -13,12 +13,12 @@ pub mod a {
 }
 
 use a::series::of::nested_modules;
-use TrafficLight::{Red, Yellow};
+use TrafficLight::*;
 
 fn main() {
   nested_modules();
 
   let red = Red;
   let yellow = Yellow;
-  let green = TrafficLight::Green;
+  let green = Green;
 }
