@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello, world!");
+    let s1: String = String::new();
 }
