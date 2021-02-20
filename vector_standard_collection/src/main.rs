@@ -20,4 +20,17 @@ fn main() {
             &0
         })
     } // free vec_scope and all elements
+
+    let v1 = vec![1, 10 ,50];
+
+    for i in &v1 {
+        println!("{}", i);
+    }
+
+    let mut v2 = vec![1, 2, 3];
+
+    for i in &mut v2 {
+        *i *= 50;
+        println!("{}", i);
+    }
 }
