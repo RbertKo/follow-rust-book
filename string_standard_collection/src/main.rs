@@ -1,3 +1,11 @@
 fn main() {
     let s1: String = String::new();
+
+    let s2: &str = "hello world";
+
+    let s3 = s2.to_string(); // Declare s3: String from s2
+
+    println!("s1: {}", s1);
+    println!("s2: {}", s2);
+    println!("s3: {}", s3);
 }
