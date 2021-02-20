@@ -1,3 +1,9 @@
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f32),
+    Text(String),
+}
+
 fn main() {
     let vec: Vec<i32> = Vec::new();
 
@@ -33,4 +39,10 @@ fn main() {
         *i *= 50;
         println!("{}", i);
     }
+
+    let multi_type_vec = vec![
+        SpreadsheetCell::Int(10),
+        SpreadsheetCell::Float(10.0),
+        SpreadsheetCell::Text(String::from("it's cell"))
+    ];
 }
