@@ -14,4 +14,5 @@ fn main() {
 
     let mut s5 = String::from("foo");
     s5.push_str("bar");
+    s5.push('1');
 }
