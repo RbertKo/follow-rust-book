@@ -15,4 +15,9 @@ fn main() {
     let mut s5 = String::from("foo");
     s5.push_str("bar");
     s5.push('1');
+
+    let s6 = String::from("hello, ");
+    let s7 = String::from("world!");
+
+    let s8 = s6 + &s7;
 }
