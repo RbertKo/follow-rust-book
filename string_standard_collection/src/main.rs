@@ -20,4 +20,10 @@ fn main() {
     let s7 = String::from("world!");
 
     let s8 = s6 + &s7;
+
+    let s9 = String::from("tic");
+    let s10 = String::from("tac");
+    let s11 = String::from("toe");
+
+    let s12 = s9 + "-" + &s10 + "-" + &s11;
 }
