@@ -24,6 +24,8 @@ fn main() {
     let s9 = String::from("tic");
     let s10 = String::from("tac");
     let s11 = String::from("toe");
+    let s12 = s9 + "-" + &s10 + "-" + &s11; // It's sucks
 
-    let s12 = s9 + "-" + &s10 + "-" + &s11;
+    let s13 = String::from("tic");
+    let s14 = format!("{}-{}-{}", s13, s10, s11);
 }
