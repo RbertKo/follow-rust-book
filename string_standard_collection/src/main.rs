@@ -28,4 +28,7 @@ fn main() {
 
     let s13 = String::from("tic");
     let s14 = format!("{}-{}-{}", s13, s10, s11);
+
+    // let s15 = String::from("hello");
+    // let h = &s15[0]; // String of the rust not support indexing
 }
