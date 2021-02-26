@@ -32,6 +32,13 @@ fn main() {
     // let s15 = String::from("hello");
     // let h = &s15[0]; // String of the rust not support indexing
 
-    let korean_len = String::from("안녕하세요").len();
+    let korean = String::from("안녕하세요");
+    let korean_len = korean.len();
     println!("5글자일까?? {}", korean_len); // 한글은 글자당 3byte이기 때문에 15로 나옴
+
+    let an = &korean[0..3];
+    println!("an: {}", an);
+
+    let hello = "Здравствуйте";
+    let answer = &hello[0..2];
 }
