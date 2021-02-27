@@ -41,4 +41,12 @@ fn main() {
 
     let hello = "Здравствуйте";
     let answer = &hello[0..2];
+
+    for i in korean.chars() {
+        println!("{}", i)
+    }
+
+    for i in korean.bytes() { // 15bytes
+        println!("{}", i)
+    }
 }
