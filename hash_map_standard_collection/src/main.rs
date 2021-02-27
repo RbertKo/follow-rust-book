@@ -1,3 +1,8 @@
 fn main() {
-    println!("Hello, world!");
+    use std::collections::HashMap;
+
+    let mut scores = HashMap::new();
+
+    scores.insert("blue", 10);
+    scores.insert("yellow", 50);
 }
