@@ -36,9 +36,13 @@ fn main() {
 
     scores3.insert(String::from("Red"), 150);
 
-    let red_team_score = scores3.get("Red");
+    {
+        let red_team_score = scores3.get("Red");
 
-    if let Some(red_score) = red_team_score {
-        println!("red team: {}", red_score);
+        if let Some(red_score) = red_team_score {
+            println!("red team: {}", red_score);
+        }
     }
+
+    scores3.entry(String::from("Red")).or_insert(200);
 }
