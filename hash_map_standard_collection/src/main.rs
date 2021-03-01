@@ -9,7 +9,16 @@ fn main() {
     let teams = vec![String::from("Blue"), String::from("Yellow")];
     let initial_scores = vec![10, 50];
 
-    let socres2: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
+    let scores2: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
 
-    println!("{:?}", socres2);
+    println!("{:?}", scores2);
+
+    // Ownership of Hashmap
+    let new_team_name = String::from("Red");
+    let new_team_score = 100;
+
+    let mut scores3 = HashMap::new();
+
+    scores3.insert(new_team_name, new_team_score);
+    //new_team_name and new_team_score are invalid at this point.
 }
