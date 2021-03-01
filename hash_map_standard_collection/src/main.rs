@@ -22,13 +22,23 @@ fn main() {
     scores3.insert(new_team_name, new_team_score);
     //new_team_name and new_team_score are invalid at this point.
 
-    let red_team_score = scores3.get("Red");
+    {
+        let red_team_score = scores3.get("Red");
 
-    if let Some(red_score) = red_team_score {
-        println!("red team: {}", red_score);
+        if let Some(red_score) = red_team_score {
+            println!("red team: {}", red_score);
+        }
     }
 
     for (key, value) in &scores2 {
         println!("{}: {}", key, value)
+    }
+
+    scores3.insert(String::from("Red"), 150);
+
+    let red_team_score = scores3.get("Red");
+
+    if let Some(red_score) = red_team_score {
+        println!("red team: {}", red_score);
     }
 }
