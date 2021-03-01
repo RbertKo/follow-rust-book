@@ -46,7 +46,7 @@ fn main() {
 
     let updated_red_score = scores3.entry(String::from("Red")).or_insert(200);
 
-    *updated_red_score += 10;
+    *updated_red_score += 10; // * => asterisk / dereference
 
     println!("red team: {}", updated_red_score);
 }
