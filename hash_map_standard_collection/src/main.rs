@@ -27,4 +27,8 @@ fn main() {
     if let Some(red_score) = red_team_score {
         println!("red team: {}", red_score);
     }
+
+    for (key, value) in &scores2 {
+        println!("{}: {}", key, value)
+    }
 }
