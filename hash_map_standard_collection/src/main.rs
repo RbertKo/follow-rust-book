@@ -44,5 +44,9 @@ fn main() {
         }
     }
 
-    scores3.entry(String::from("Red")).or_insert(200);
+    let updated_red_score = scores3.entry(String::from("Red")).or_insert(200);
+
+    *updated_red_score += 10;
+
+    println!("red team: {}", updated_red_score);
 }
