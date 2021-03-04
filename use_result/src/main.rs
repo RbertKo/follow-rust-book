@@ -27,5 +27,5 @@ fn main() {
         }
     };
 
-    println!("file is '{:?}'", f.to_str());
+    println!("file is '{:?}'", f);
 }
