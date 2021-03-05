@@ -19,22 +19,22 @@ fn main() {
 
     println!("{:?}", current_dir);
 
-    let f = File::open(&current_dir);
+    let f = File::open(&current_dir).unwrap();
 
-    let f = match f {
-        Ok(file) => file,
-        Err(ref error) if error.kind() == ErrorKind::NotFound => {
-            match File::create(&current_dir) {
-                Ok(fc) => fc,
-                Err(created_error) => {
-                    panic!("파일을 생성하는 도중 문제가 발생했습니다: {:?}", created_error);
-                }
-            }
-        }
-        Err(error) => {
-            panic!("파일을 여는 도중 문제가 발생했습니다: {:?}", error)
-        }
-    };
+    // let f = match f {
+    //     Ok(file) => file,
+    //     Err(ref error) if error.kind() == ErrorKind::NotFound => {
+    //         match File::create(&current_dir) {
+    //             Ok(fc) => fc,
+    //             Err(created_error) => {
+    //                 panic!("파일을 생성하는 도중 문제가 발생했습니다: {:?}", created_error);
+    //             }
+    //         }
+    //     }
+    //     Err(error) => {
+    //         panic!("파일을 여는 도중 문제가 발생했습니다: {:?}", error)
+    //     }
+    // };
 
     println!("file is '{:?}'", f);
 }
