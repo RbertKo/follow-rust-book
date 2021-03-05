@@ -19,7 +19,8 @@ fn main() {
 
     println!("{:?}", current_dir);
 
-    let f = File::open(&current_dir).unwrap();
+    // let f = File::open(&current_dir).unwrap();
+    let f = File::open(&current_dir).expect("파일을 여는 도중 문제가 발생했습니다!");
 
     // let f = match f {
     //     Ok(file) => file,
