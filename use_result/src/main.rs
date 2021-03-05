@@ -53,6 +53,6 @@ fn read_username_from_file(path: &str) -> Result<String, io::Error> {
 
     match f.read_to_string(&mut s) {
         Ok(_) => Ok(s),
-        Err(error) => Err(e),
+        Err(error) => Err(error),
     }
 }
