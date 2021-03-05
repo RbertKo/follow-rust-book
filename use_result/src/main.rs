@@ -1,5 +1,6 @@
-use std::fs::File;
+use std::io;
 use std::io::ErrorKind;
+use std::fs::File;
 use std::env;
 
 fn main() {
@@ -38,4 +39,20 @@ fn main() {
     // };
 
     println!("file is '{:?}'", f);
+}
+
+fn read_username_from_file(path: &str) -> Result<String, io::Error> {
+    let f = File::open(path);
+
+    let mut f = match f {
+        Ok(file) => file,
+        Err(error) => return Err(error),
+    };
+
+    let mut s = String::new();
+
+    match f.read_to_string(&mut s) {
+        Ok(_) => Ok(s),
+        Err(error) => Err(e),
+    }
 }
