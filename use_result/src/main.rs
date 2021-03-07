@@ -45,6 +45,9 @@ fn main() {
 fn read_username_from_file(path: &str) -> Result<String, io::Error> { // propagating error
     let mut f = File::open(path)?;
 
+    // '?' operator 는 Ok이면 값을 할당해주고, Err면 해당 Err를 return해준다. 
+    // 또, '?' operator 는 Result를 반환하는 함수에서만 사용할 수 있다.
+
     let mut s = String::new();
 
     f.read_to_string(&mut s)?;
