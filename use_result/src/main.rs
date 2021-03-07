@@ -42,7 +42,7 @@ fn main() {
     println!("file is '{:?}'", f);
 }
 
-fn read_username_from_file(path: &str) -> Result<String, io::Error> {
+fn read_username_from_file(path: &str) -> Result<String, io::Error> { // propagating error
     let mut f = File::open(path)?;
 
     let mut s = String::new();
