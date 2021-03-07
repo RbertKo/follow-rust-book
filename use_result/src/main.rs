@@ -1,6 +1,7 @@
 use std::io;
 use std::io::ErrorKind;
 use std::fs::File;
+use std::io::Read;
 use std::env;
 
 fn main() {
@@ -42,7 +43,7 @@ fn main() {
 }
 
 fn read_username_from_file(path: &str) -> Result<String, io::Error> {
-    let f = File::open(path)?;
+    let mut f = File::open(path)?;
 
     let mut s = String::new();
 
