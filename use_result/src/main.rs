@@ -46,7 +46,7 @@ fn read_username_from_file(path: &str) -> Result<String, io::Error> {
 
     let mut s = String::new();
 
-    match f.read_to_string(&mut s)?;
+    f.read_to_string(&mut s)?;
 
     Ok(s)
 }
