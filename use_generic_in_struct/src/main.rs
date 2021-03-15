@@ -14,6 +14,15 @@ impl<T> Point<T> {
     }
 }
 
+impl<T,U> PointV2<T, U> {
+    fn mixin<V, W>(self, other: PointV2<V, W>) -> PointV2<T, W> {
+        PointV2 {
+            x: self.x,
+            y: other.y
+        }
+    }
+}
+
 fn main() {
     let integer = Point { x: 5, y: 10 };
     let float = Point { x: 1.0, y: 4.0 };
@@ -23,4 +32,10 @@ fn main() {
     let union_point = PointV2 { x: 5, y: 1.0 };
 
     println!("intefer.x = {}", integer.x);
+
+    let integer_v2 = PointV2 { x: 'a', y: 'c'};
+
+    let mixed_point = union_point.mixin(integer_v2);
+
+    println!("mixed_point (x: {}, y: {})", mixed_point.x, mixed_point.y);
 }
