@@ -36,6 +36,10 @@ fn notify<T: Summarizable>(item: T) {
     println!("Breaking news! {}", item.summary());
 }
 
+fn notify2<T>(item: T) where T: Summarizable {
+    println!("Breaking news! {}", item.summary());
+}
+
 #[test]
 fn tweet_trait() {
     let tweet = Tweet {
