@@ -32,6 +32,10 @@ impl Summarizable for Tweet {
     }
 }
 
+fn notify<T: Summarizable>(item: T) {
+    println!("Breaking news! {}", item.summary());
+}
+
 #[test]
 fn tweet_trait() {
     let tweet = Tweet {
