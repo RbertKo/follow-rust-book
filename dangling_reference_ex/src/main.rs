@@ -1,8 +1,10 @@
 fn main() {
+    let x = 5;
+    
     let r;
 
     {
-        let x = 5;
+        
         r = &x;
     }
 
