@@ -1,9 +1,14 @@
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
+// fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+//     if x.len() > y.len() {
+//         x
+//     } else {
+//         y
+//     }
+// }
+
+fn longest(x: &str, y: &str) -> &'a str {
+    let result = String::from("really long string");
+    result.as_str()
 }
 
 fn main() {
