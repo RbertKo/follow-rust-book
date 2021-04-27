@@ -18,3 +18,12 @@ fn main() {
 
     println!("With text:\n{}", contents);
 }
+
+impl Config {
+    fn new(args: &[String]) -> Config {
+        let query = args[1].clone();
+        let filename = args[2].clone();
+
+        Config { query, filename }
+    }
+}
