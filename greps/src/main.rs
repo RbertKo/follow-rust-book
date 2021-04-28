@@ -19,6 +19,13 @@ fn main() {
     println!("With text:\n{}", contents);
 }
 
+fn parse_config(args: &[String]) -> (&str, &str) {
+    let query = &args[1];
+    let filename = &args[2];
+
+    (query, filename)
+}
+
 impl Config {
     fn new(args: &[String]) -> Config {
         let query = args[1].clone();
