@@ -26,7 +26,7 @@ fn parse_config(args: &[String]) -> (&str, &str) {
     (query, filename)
 }
 
-impl Config {
+impl Config { 
     fn new(args: &[String]) -> Config {
         let query = args[1].clone();
         let filename = args[2].clone();
