@@ -1,3 +1,5 @@
 fn main() {
-    println!("Hello, world!");
+     let a = Box::new(10);
+
+     println!("{}", a);
 }
